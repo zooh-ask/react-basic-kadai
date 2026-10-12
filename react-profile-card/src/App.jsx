@@ -15,8 +15,13 @@ function App() {
   const [index, setIndex] = useState(0)
 
   const handleClick = () => {
-    setIndex(index + 1)
+    if (index == 4) {
+      setIndex(index - 4)
+    } else {
+      setIndex(index + 1)
+    }
   };
+
   return (
     <>
       <ProfileCard name={profiles[index].name} age={profiles[index].age} bio={profiles[index].bio} />
