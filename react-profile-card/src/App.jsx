@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './App.css'
+import { ProfileCard } from './ProfileCard'
 
 function App() {
+
   const profiles = [
     { name: '侍健太', age: 37, bio: 'プロジェクトマネージャー。チームの進捗管理と課題解決が得意です。' },
     { name: '刀沢彩香', age: 32, bio: 'フルスタックエンジニア。新規サービスの設計から運用まで担当しています。' },
@@ -15,10 +17,12 @@ function App() {
   const handleClick = () => {
     setIndex(index + 1)
   };
-
   return (
     <>
-      <ProfileCard name={name} age={age} bio={bio} />
+      <ProfileCard name={profiles[index].name} age={profiles[index].age} bio={profiles[index].bio} />
+      <div>
+        <button onClick={handleClick}>次のプロフィール</button>
+      </div>
     </>
   )
 }
