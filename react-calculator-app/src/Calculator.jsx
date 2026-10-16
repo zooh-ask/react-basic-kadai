@@ -67,7 +67,7 @@ export function Calculator() {
   return (
     <div className="calculator-container">
       <h2>電卓アプリ</h2>
-      <output>{display}</output>
+      <div className="display">{display || '0'}</div>
       <div className="button-grid">
         {buttons.map(
           (btn) => (
