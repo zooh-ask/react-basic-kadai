@@ -1,0 +1,30 @@
+.calculator-container {
+  background-color: whitesmoke;
+  border: 1px solid grey;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+output {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+  min-height: 2em;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid grey;
+  margin-bottom: 8px;
+}
+
+.button-grid {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 8px;
+}
+
+button {
+  background-color: lightblue;
+}
